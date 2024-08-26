@@ -1,5 +1,5 @@
 <div class="flex px-4 py-4 bg-gray-900 mr-4 w-full">
-    <ul class="flex sm:flex-row justify-between items-center md:w-8/12 w-full">
+    <ul class="flex sm:flex-row justify-between items-center md:w-3/12 w-full">
         <li class="mr-4 sm:mr-0 text-center px-7 py-2 md:px-2  text-slate-200 bg-black border-white border-2 border-solid rounded-md hover:bg-white hover:text-black">
             <a href="/">Inicio</a>
         </li>
