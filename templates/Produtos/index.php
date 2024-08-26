@@ -8,9 +8,8 @@
     </script>
 <?php $this->end(); ?>
 
-<h1 class="text-blue">oi</h1>
-<p>skdjksjfseres</p>
+<?= $this->element('header/header') ?>
 
 <h1 class="text-3xl font-bold text-blue-600 underline">
     Hello world!
-  </h1>
+</h1>
