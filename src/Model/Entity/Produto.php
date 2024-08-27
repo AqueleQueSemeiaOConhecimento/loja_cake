@@ -14,6 +14,7 @@ use Cake\ORM\Entity;
  * @property int $quantidade
  * @property \Cake\I18n\DateTime $created_at
  * @property \Cake\I18n\DateTime $updated_at
+ * @property float $valor
  *
  * @property \App\Model\Entity\Pedido[] $pedidos
  */
@@ -34,6 +35,7 @@ class Produto extends Entity
         'quantidade' => true,
         'created_at' => true,
         'updated_at' => true,
+        'valor' => true,
         'pedidos' => true,
     ];
 }

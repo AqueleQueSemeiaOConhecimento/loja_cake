@@ -11,7 +11,6 @@ use Cake\Validation\Validator;
 /**
  * Produtos Model
  *
- * @property \App\Model\Table\PedidosTable&\Cake\ORM\Association\HasMany $Pedidos
  * @property \App\Model\Table\PedidosTable&\Cake\ORM\Association\BelongsToMany $Pedidos
  *
  * @method \App\Model\Entity\Produto newEmptyEntity()
@@ -44,9 +43,6 @@ class ProdutosTable extends Table
         $this->setDisplayField('nome');
         $this->setPrimaryKey('id');
 
-        $this->hasMany('Pedidos', [
-            'foreignKey' => 'produto_id',
-        ]);
         $this->belongsToMany('Pedidos', [
             'foreignKey' => 'produto_id',
             'targetForeignKey' => 'pedido_id',
@@ -86,6 +82,10 @@ class ProdutosTable extends Table
         $validator
             ->dateTime('updated_at')
             ->notEmptyDateTime('updated_at');
+
+        $validator
+            ->numeric('valor')
+            ->notEmptyString('valor');
 
         return $validator;
     }

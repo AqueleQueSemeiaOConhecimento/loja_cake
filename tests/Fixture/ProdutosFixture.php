@@ -23,8 +23,9 @@ class ProdutosFixture extends TestFixture
                 'nome' => 'Lorem ipsum dolor sit amet',
                 'cod' => 'Lorem ipsum dolor sit amet',
                 'quantidade' => 1,
-                'created_at' => 1724623149,
-                'updated_at' => 1724623149,
+                'created_at' => 1724783991,
+                'updated_at' => 1724783991,
+                'valor' => 1,
             ],
         ];
         parent::init();

@@ -23,13 +23,13 @@ class PedidosClientesSeed extends AbstractSeed
         $faker = Faker\Factory::create();
         $data = [];
 
-        $numPedidos = 420;
-        $numClientes = 80;
+        $numPedidos = 210;
+        $numClientes = 20;
 
         for ($i = 0; $i < $numPedidos; $i++) {
             $data[] = [
-                'pedido_id'  => $faker->numberBetween(211, $numPedidos),
-                'cliente_id' => $faker->numberBetween(61, $numClientes),
+                'pedido_id'  => $faker->numberBetween(1, $numPedidos),
+                'cliente_id' => $faker->numberBetween(1, $numClientes),
             ];
             $table = $this->table('pedidos_clientes');
             $table->insert($data)->save();

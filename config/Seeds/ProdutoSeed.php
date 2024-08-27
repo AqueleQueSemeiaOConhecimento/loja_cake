@@ -27,6 +27,7 @@ class ProdutoSeed extends AbstractSeed
             $data['nome'] = $faker->unique()->words(3, true);
             $data['cod'] = $faker->unique()->bothify('####');
             $data['quantidade'] = $faker->numberBetween(7, 99);
+            $data['valor'] = $faker->numberBetween(200, 4200);
 
             $table = $this->table('produtos');
             $table->insert($data)->save();

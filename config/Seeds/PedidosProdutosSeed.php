@@ -23,13 +23,13 @@ class PedidosProdutosSeed extends AbstractSeed
         $faker = Faker\Factory::create();
         $data = [];
 
-        $numPedidos = 420;
-        $numProdutos = 80;
+        $numPedidos = 210;
+        $numProdutos = 20;
 
         for ($i = 0; $i < 20; $i++) { 
             $data[] = [
-                'pedido_id'  => $faker->numberBetween(211, $numPedidos),
-                'produto_id' => $faker->numberBetween(61, $numProdutos)
+                'pedido_id'  => $faker->numberBetween(1, $numPedidos),
+                'produto_id' => $faker->numberBetween(1, $numProdutos)
             ];
         }
 

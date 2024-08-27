@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace App\Controller;
 
+use Cake\ORM\TableRegistry;
+
 /**
  * Produtos Controller
  *
@@ -12,8 +14,9 @@ class ProdutosController extends AppController
 {
     public function index()
     {
-        $name = 'sabrina';
+        $TableProduto = TableRegistry::getTableLocator()->get('Produtos');
+        $produtoDisponivel = $TableProduto->find('all', ['order' => 'valor asc']);
 
-        $this->set(compact('name'));
+        $this->set(compact('produtoDisponivel'));
     }
 }
