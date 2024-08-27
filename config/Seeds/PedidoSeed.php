@@ -24,8 +24,13 @@ class PedidoSeed extends AbstractSeed
         $faker = Faker\Factory::create();
 
         for ($i = 0; $i < 20; $i++) {
+            $data[] = [
+                'created_at' => $faker->dateTimeThisYear->format('Y-m-d H:i:s')
+            ];
+            
             $table = $this->table('pedidos');
             $table->insert($data)->save();
         }
+        
     }
 }

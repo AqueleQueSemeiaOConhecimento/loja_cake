@@ -23,14 +23,13 @@ class PedidosProdutosSeed extends AbstractSeed
         $faker = Faker\Factory::create();
         $data = [];
 
-        // Assumindo que você tem 20 pedidos e 50 produtos
-        $numPedidos = 20;
-        $numProdutos = 50;
+        $numPedidos = 420;
+        $numProdutos = 80;
 
-        for ($i = 0; $i < 100; $i++) { // Adicionando 100 associações fictícias
+        for ($i = 0; $i < 20; $i++) { 
             $data[] = [
-                'pedido_id'  => $faker->numberBetween(1, $numPedidos),
-                'produto_id' => $faker->numberBetween(1, $numProdutos)
+                'pedido_id'  => $faker->numberBetween(211, $numPedidos),
+                'produto_id' => $faker->numberBetween(61, $numProdutos)
             ];
         }
 
